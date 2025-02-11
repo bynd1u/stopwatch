@@ -4,11 +4,12 @@ let second = 0;
 let count = 0;
 
 let isRunning = false;
+let intervalId = null;
 
 function start() {
     console.log('start');
     isRunning = true;
-    setInterval(runClock, 10);
+    intervalId = setInterval(runClock, 10);
 }
 
 function reset() {
@@ -18,10 +19,12 @@ function reset() {
     second = 0;
     count = 0;
     updateDisplay();
+    clearInterval(intervalId);
 }
 
 function stop() {
     isRunning = false;
+    clearInterval(intervalId);
 }
 
 function runClock()
