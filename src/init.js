@@ -1,7 +1,8 @@
-// import loadEvent from './events/loadEvent.js';
-// import addItemEvent from './events/addItemEvent.js';
-// import clearAllEvent from './events/clearAllEvent.js';
+import  { runClock } from "./components/clock.js";
+import  startClockEvent  from "./events/startClockEvent.js";
+import  stopClockEvent  from "./events/stopClockEvent.js";
+import  resetClockEvent  from "./events/resetClockEvent.js";
 
-// loadEvent();
-// addItemEvent();
-// clearAllEvent();
+startClockEvent();
+stopClockEvent();
+resetClockEvent();
